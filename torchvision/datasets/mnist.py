@@ -62,6 +62,22 @@ class MNIST(VisionDataset):
     def test_data(self):
         warnings.warn("test_data has been renamed data")
         return self.data
+    
+    @train_labels.setter
+    def train_labels(self, value):
+        self.targets = value
+        
+    @test_labels.setter
+    def test_labels(self, value):
+        self.test_labels = value
+        
+    @train_data.setter
+    def train_data(self, value):
+        self.train_data = value
+        
+    @test_data.setter
+    def p2(self, value):
+        self.test_data = value
 
     def __init__(
             self,
